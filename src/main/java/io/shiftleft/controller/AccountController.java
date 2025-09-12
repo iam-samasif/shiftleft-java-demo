@@ -68,7 +68,8 @@ public class AccountController {
         account.addInterest();
         this.accountRepository.save(account);
         log.info("Account Data is {}", account.toString());
-        return account;
+        return account
     }
 
 }
+
