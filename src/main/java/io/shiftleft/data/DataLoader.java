@@ -99,6 +99,6 @@ public class DataLoader implements CommandLineRunner {
     for (Patient patient : dataBuilder.createPatients()) {
       patientRepository.save(patient);
     }
-    log.debug("Test data loaded...");
+    log.debug("Test data loaded...")
   }
 }
