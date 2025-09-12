@@ -55,7 +55,7 @@ public class AccountController {
 
     @PostMapping("/account/{accountId}/withdraw")
     public Account withdrawFromAccount(@RequestParam double amount, @PathVariable long accountId) {
-        Account account = this.accountRepository.findOne(accountId);
+        Account account = this.accountRepository.findOne(accountId)
         account.withdraw(amount);
         this.accountRepository.save(account);
         log.info("Account Data is {}", account.toString());
@@ -72,3 +72,4 @@ public class AccountController {
     }
 
 }
+
